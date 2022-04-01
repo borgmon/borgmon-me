@@ -2,6 +2,7 @@ baseURL: "https://borgmon.github.io/borgmon-me/"
 languageCode: "en-us"
 title: "Borgmon Me"
 theme: hugo-profile
+relativeURLs: true
 
 Paginate: 3
 markup:
