@@ -4,18 +4,23 @@ title: "Borgmon Me"
 theme: hugo-profile
 relativeURLs: true
 
-Paginate: 3
+Paginate: 6
 markup:
   goldmark:
     renderer:
       unsafe: true
-      
+
 Menus:
   main:
-    - identifier: bloga
-      name: Bloga
-      title: Blog posts
-      url: /blogsa
+    - identifier: project
+      name: Projects
+      title: Projects
+      url: /projects
+      weight: 1
+    - identifier: tag
+      name: Tags
+      title: Tags
+      url: /tags
       weight: 1
 
 params:
@@ -35,16 +40,16 @@ params:
 
   # color preference
   color:
-    textColor: 
-    secondaryTextColor: 
-    backgroundColor: 
-    secondaryBackgroundColor: 
+    textColor:
+    secondaryTextColor:
+    backgroundColor:
+    secondaryBackgroundColor:
     primaryColor: "#FF7568"
-    secondaryColor: 
+    secondaryColor:
 
     darkmode:
-      textColor: 
-      secondaryTextColor: 
+      textColor:
+      secondaryTextColor:
       backgroundColor:
       secondaryBackgroundColor:
       primaryColor: "#FF7568"
@@ -52,16 +57,16 @@ params:
 
   # If you want to customize the menu, you can change it here
   navbar:
-  #   align: mx-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
-  #   brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
-  #   brandName: "Profile" # Brand name for the brand | default is the title variable
+    #   align: mx-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    #   brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+    #   brandName: "Profile" # Brand name for the brand | default is the title variable
 
     menus:
       # disableAbout: true
-      # disableExperience: true
-      # disableEducation: true
-      # disableProjects: true
-      # disableAchievements: true
+      disableExperience: true
+      disableEducation: true
+      disableProjects: true
+      disableAchievements: true
       # disableContact: true
 
   # Hero
@@ -82,7 +87,7 @@ params:
     title: "About Me"
     content: |-
       I am Borgmon. A full stack developer. I enjoy creating data flow. From front-end to backend, through load balancer, they are transformed via immutable stream and saved to database. They are bouncing bits, they can be traced, be visualized, and be studied. 
-      
+
       I’m looking forward to engineer on those bouncing bits for your business.
     skills:
       enable: true
@@ -99,92 +104,6 @@ params:
   projects:
     enable: true
     items:
-      - title: Docker State Proxy
-        content: Expose your container state with a public API safely
-        image: https://opengraph.githubassets.com/193ca4b23264f3efe8e0786d2ddeb8c98d9766f175cf23e8bc7ca1a14a97f80b/borgmon/state-proxy
-        badges:
-          - "Go"
-          - "Gin"
-          - "Docker"
-        links:
-          - icon: fab fa-github
-            url: https://github.com/borgmon/state-proxy
-            
-      - title: Next Twister
-        content: A twister spinner made with Next.js. 
-        image: https://github.com/borgmon/next-twister/raw/main/Screen%20Shot.png
-        featured:
-          name: Demo
-          link: https://borgmon.github.io/next-twister/
-        badges:
-          - "React"
-          - "Next.js"
-          - "MUI"
-        links:
-          - icon: fab fa-github
-            url: https://github.com/borgmon/next-twister
-
-      - title: TunaFlow
-        content: Generate a data transformation microservice with YAML! 
-        image: https://github.com/borgmon/tunaflow/raw/main/Tunaflow.png
-        badges:
-          - "Go"
-          - "Go gen"
-        links:
-          - icon: fab fa-github
-            url: https://github.com/borgmon/tunaflow
-
-      - title: gitlabvar
-        content: A CLI tool export or apply your gitlab variables. 
-        image: https://opengraph.githubassets.com/e126ee060741950037825d128e9dbfe7af36473779143f5b450fe5ff90295983/borgmon/gitlabvar
-        badges:
-          - "Go"
-          - "Gitlab"
-        links:
-          - icon: fab fa-github
-            url: https://github.com/borgmon/gitlabvar
-
-      - title: go-kinspector
-        content: A TUI tool inspect your AWS kinesis streams, check records, and put new records. 
-        image: https://github.com/borgmon/go-kinspector/raw/main/screenshot.png
-        badges:
-          - "Go"
-          - "AWS"
-          - "Kinesis"
-        links:
-          - icon: fab fa-github
-            url: https://github.com/borgmon/go-kinspector
-
-      - title: go-reddit-wallpaper
-        content:  A cross-platform software that changes your wallpaper everyday (with go!) 
-        image: https://github.com/borgmon/go-reddit-wallpaper/raw/master/screenshots/screenshot.png
-        badges:
-          - "Go"
-          - "AWS"
-        links:
-          - icon: fab fa-github
-            url: https://github.com/borgmon/go-reddit-wallpaper
-
-      - title: Remove the watermark from GradImages using Machine Learning
-        content:  A tutorial on Medium show you how to remove the watermark from GradImages using Machine Learning (Deep image prior)
-        image: https://miro.medium.com/max/1196/1*5SeUwhsnA0JcMuMDCjsZgg.png
-        badges:
-          - "Python"
-          - "ML"
-        featured:
-          name: Read
-          link: https://medium.com/@borgmon/how-to-remove-the-watermark-from-gradimages-using-machine-learning
-
-      - title: Cloudflare Tunnel (cloudflared) as Reverse Proxy
-        content:  A tutorial on Medium about using Cloudflare Tunnel as Reverse Proxy
-        image: https://miro.medium.com/max/1400/0*hfXT-s5zumdBuO-I
-        badges:
-          - "Cloudflare"
-          - "Reverse Proxy"
-          - "DNS"
-        featured:
-          name: Read
-          link: https://medium.com/@borgmon/cloudflare-tunnel-cloudflared-as-ingress-controller
 
   #Contact
   contact:
@@ -193,7 +112,6 @@ params:
     btnName: Mail me
 
   footer:
-    # recentPosts: false
+    recentPosts: false
     socialNetworks:
       github: https://github.com/borgmon
-
