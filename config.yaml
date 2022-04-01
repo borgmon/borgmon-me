@@ -1,4 +1,4 @@
-baseURL: "https://borgmon.github.io/borgmon-me/"
+baseURL: "https://borgmon.github.io/"
 languageCode: "en-us"
 title: "Borgmon Me"
 theme: hugo-profile
